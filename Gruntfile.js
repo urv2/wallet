@@ -149,7 +149,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'webkitbuilds/',
           src: ['.desktop', '../public/img/icons/favicon.ico', '../public/img/icons/icon-256.png'],
-          dest: 'webkitbuilds/Copay/linux64/',
+          dest: 'webkitbuilds/urv2/linux64/',
           flatten: true,
           filter: 'isFile'
         }],
@@ -175,10 +175,10 @@ module.exports = function(grunt) {
     },
     nodewebkit: {
       options: {
-        appName: 'Unicoisa',
+        appName: 'urv2',
         platforms: ['win64', 'osx64', 'linux64'],
         buildDir: './webkitbuilds',
-        version: '0.12.2',
+        version: '1.0.0',
         macIcns: './public/img/icons/icon.icns',
         exeIco: './public/img/icons/icon.ico'
       },
@@ -187,12 +187,12 @@ module.exports = function(grunt) {
     compress: {
       linux: {
         options: {
-          archive: './webkitbuilds/Copay-linux.zip'
+          archive: './webkitbuilds/urv2-linux.zip'
         },
         expand: true,
-        cwd: './webkitbuilds/Copay/linux64/',
+        cwd: './webkitbuilds/urv2/linux64/',
         src: ['**/*'],
-        dest: 'copay-linux/'
+        dest: 'urv2-linux/'
       }
     },
     browserify: {

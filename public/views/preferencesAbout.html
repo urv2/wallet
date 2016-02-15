@@ -1,7 +1,7 @@
 <div 
   class="topbar-container" 
   ng-include="'views/includes/topbar.html'"
-  ng-init="titleSection='About Copay'; goBackToState = 'preferencesGlobal'; noColor = true">
+  ng-init="titleSection='About urv2'; goBackToState = 'preferencesGlobal'; noColor = true">
 </div>
 
 <div class="content preferences" ng-controller="preferencesAbout as about">
@@ -14,7 +14,7 @@
             v{{v.version}} 
           </span>      
         </li>
-        <li  ng-conf ng-click="$root.openExternalLink('https://github.com/bitpay/copay/tree/'+v.commitHash)">
+        <li  ng-conf ng-click="$root.openExternalLink('https://github.com/urv2/wallet/tree/'+v.commitHash)">
           <span translate>Commit hash</span>
           <span class="right text-gray">
             #{{v.commitHash}}

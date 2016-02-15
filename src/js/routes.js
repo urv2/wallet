@@ -552,7 +552,7 @@ angular
         type: "menubar"
       });
       try {
-        nativeMenuBar.createMacBuiltin("Copay");
+        nativeMenuBar.createMacBuiltin("urv2");
       } catch (e) {
         $log.debug('This is not OSX');
       }

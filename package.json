@@ -1,7 +1,7 @@
 {
-  "name": "Unicoisa",
+  "name": "urv2",
   "description": "A multisignature wallet",
-  "author": "Kosta Korenkov",
+  "author": "Kosta Korenkov <7r0ggy@gmail.com>",
   "version": "1.0.0",
   "keywords": [
     "wallet",
@@ -15,7 +15,7 @@
   ],
   "main": "public/index.html",
   "window": {
-    "title": "Unicoisa - A multisignature wallet",
+    "title": "urv2 - A multisignature wallet",
     "icon": "./public/img/icons/icon-256.png",
     "toolbar": false,
     "show": true,
@@ -32,10 +32,10 @@
     "java": false,
     "plugin": false
   },
-  "homepage": "http://unicoisa.coloredcoins.org",
+  "homepage": "http://urv2.com.br",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/troggy/unicoisa.git",
+    "url": "git://github.com/urv2/wallet.git",
     "type": "git"
   },
   "dependencies": {

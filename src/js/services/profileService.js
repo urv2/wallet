@@ -381,7 +381,7 @@ angular.module('copayApp.services')
         'walletId': walletId
       });
       if (w) {
-        return cb(gettext('Wallet already in Copay' + ": ") + w.walletName);
+        return cb(gettext('Wallet already in urv2' + ": ") + w.walletName);
       }
 
       var config = configService.getSync();

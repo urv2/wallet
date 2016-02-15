@@ -2,7 +2,7 @@
 
 'use strict';
 
-console.log('Swipe wallet is outdated, and it does not work with Copay 0.10.x');
+console.log('Swipe wallet is outdated');
 process.exit(1);
 
 var _ = require('lodash');

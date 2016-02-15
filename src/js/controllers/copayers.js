@@ -101,8 +101,8 @@ angular.module('copayApp.controllers').controller('copayersController',
         if (isMobile.Android() || isMobile.Windows()) {
           window.ignoreMobilePause = true;
         }
-        var message = gettextCatalog.getString('Join my Copay wallet. Here is the invitation code: {{secret}} You can download Copay for your phone or desktop at https://copay.io', {secret: secret});
-        window.plugins.socialsharing.share(message, gettextCatalog.getString('Invitation to share a Copay Wallet'), null, null);
+        var message = gettextCatalog.getString('Join my urv2 wallet. Here is the invitation code: {{secret}} You can download urv2 for your phone or desktop at https://urv2.com.br', {secret: secret});
+        window.plugins.socialsharing.share(message, gettextCatalog.getString('Invitation to share a urv2 Wallet'), null, null);
       }
     };
 

@@ -23,9 +23,9 @@ webkitbuilds/*
 
 
 # chrome extensions
-browser-extensions/chrome/copay-chrome-extension
-browser-extensions/chrome/copay-chrome-extension.zip
-browser-extensions/chrome/copay-chrome-extension.zip.sig
+browser-extensions/chrome/urv2-chrome-extension
+browser-extensions/chrome/urv2-chrome-extension.zip
+browser-extensions/chrome/urv2-chrome-extension.zip.sig
 
 # Logs
 logs
@@ -90,7 +90,7 @@ Session.vim
 .netrwhist
 *~
 
-# copay public
+# urv2 public
 public/icons/*
 public/css/*
 public/lib/*

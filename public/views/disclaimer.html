@@ -3,7 +3,7 @@
   ng-controller="disclaimerController as disclaimer" ng-init="disclaimer.init()">
   <div class="row">
     <div class="medium-centered small-centered large-centered columns size-14">
-      <span class="text-bold text-white" translate>WELCOME TO COPAY</span>
+      <span class="text-bold text-white" translate>WELCOME TO URV2</span>
       <p class="text-gray m0 text-light" translate>A multisignature bitcoin wallet</p>
     </div>
   </div>
@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" ng-if="false">
     <p ng-show="disclaimer.lang != 'en'">
       <a class="center" ng-click="$root.openExternalLink('https://copay.io/disclaimer')" translate>Official English Disclaimer</a>
     </p>

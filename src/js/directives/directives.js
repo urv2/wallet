@@ -310,7 +310,7 @@ angular.module('copayApp.directives')
         $scope.logo_url = $scope.negative ? 'img/' + logoNegative : 'img/' + logo;
       },
       replace: true,
-      template: '<img ng-src="{{ logo_url }}" alt="Copay">'
+      template: '<img ng-src="{{ logo_url }}" alt="urv2">'
     }
   })
   .directive('availableBalance', function() {

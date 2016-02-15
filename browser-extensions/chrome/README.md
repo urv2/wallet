@@ -6,4 +6,4 @@ Development
 $ sh chrome/build.sh
 ```
 
-* The ZIP file is *chrome/copay-chrome-extension.zip*
+* The ZIP file is *chrome/urv2-chrome-extension.zip*

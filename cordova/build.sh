@@ -56,7 +56,7 @@ echo "Project directory is $PROJECT"
 if [ ! -d $PROJECT ]; then
   cd $BUILDDIR
   echo "${OpenColor}${Green}* Creating project... ${CloseColor}"
-  cordova create project org.coloredcoins.unicoisa Unicoisa
+  cordova create project br.com.urv2.wallet urv2
   checkOK
 
   cd $PROJECT
@@ -166,12 +166,12 @@ fi
 
 if $DBGJS
 then
-  echo "${OpenColor}${Green}* Generating copay bundle (debug js)...${CloseColor}"
+  echo "${OpenColor}${Green}* Generating urv2 bundle (debug js)...${CloseColor}"
   cd $BUILDDIR/..
   grunt
   checkOK
 else
-  echo "${OpenColor}${Green}* Generating copay bundle...${CloseColor}"
+  echo "${OpenColor}${Green}* Generating urv2 bundle...${CloseColor}"
   cd $BUILDDIR/..
   grunt prod
   checkOK
@@ -216,19 +216,19 @@ if [ $CURRENT_OS == "IOS" ]; then
   mkdir -p $PROJECT/platforms/ios
   checkOK
 
-  cp ios/Copay-Info.plist $PROJECT/platforms/ios/Copay-Info.plist
+  cp ios/urv2-Info.plist $PROJECT/platforms/ios/urv2-Info.plist
   checkOK
 
-  mkdir -p $PROJECT/platforms/ios/Unicoisa/Resources/icons
+  mkdir -p $PROJECT/platforms/ios/urv2/Resources/icons
   checkOK
 
-  mkdir -p $PROJECT/platforms/ios/Unicoisa/Resources/splash
+  mkdir -p $PROJECT/platforms/ios/urv2/Resources/splash
   checkOK
 
-  cp -R ios/icons/* $PROJECT/platforms/ios/Unicoisa/Resources/icons
+  cp -R ios/icons/* $PROJECT/platforms/ios/urv2/Resources/icons
   checkOK
 
-  cp -R ios/splash/* $PROJECT/platforms/ios/Unicoisa/Resources/splash
+  cp -R ios/splash/* $PROJECT/platforms/ios/urv2/Resources/splash
   checkOK
 fi
 

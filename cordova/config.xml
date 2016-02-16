@@ -16,7 +16,7 @@
     <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="DisallowOverscroll" value="true"/>
     <preference name="HideKeyboardFormAccessoryBar" value="true"/>
-    <preference name="SplashScreen" value="copayscreen" />
+    <preference name="SplashScreen" value="screen" />
     <preference name="ShowSplashScreenSpinner" value="false" /> 
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="FadeSplashScreen" value="true" />  

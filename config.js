@@ -16,6 +16,14 @@ window.unicoisaConfig = {
       pluralSymbol: 'R$'
     }
   ],
+  coluRpcServer: {
+    livenet: {
+      baseUrl: 'https://carteira.urv2.com.br:8090'
+    },
+    testnet: {
+      baseUrl: 'https://carteira.urv2.com.br:8091'
+    }
+  },
   defaultAsset: 'LFu6pNp5FLHQu1RERkYEjPjxFZLD3zNJAbhYz',
   logo: '',
   coluApiKey: '',

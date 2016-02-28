@@ -62,7 +62,7 @@ module.exports = function(grunt) {
           'bower_components/angular-loggly-logger/angular-loggly-logger.js',
           'bower_components/he/he.js',
           'angular-bitcore-wallet-client/angular-bitcore-wallet-client.js',
-          'bower_components/colu-copay-addon/dist/coluCopayAddon.js',
+          'bower_components/colu-copay-addon/dist/coluCopayAddon-no-issuance.js',
           'bower_components/colu-copay-addon/config.js'
         ],
         dest: 'public/lib/angular.js'

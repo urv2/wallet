@@ -397,7 +397,9 @@ angular.module('copayApp.controllers').controller('walletHomeController',
             $scope.loading = false;
             if (err) {
               $scope.error = bwsError.msg(err, gettextCatalog.getString('Could not broadcast payment'));
-              $scope.$digest();
+              $timeout(function() {
+                $scope.$digest();
+              }, 1);
             } else {
 
               if (memo)

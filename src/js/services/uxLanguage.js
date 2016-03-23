@@ -16,6 +16,9 @@ angular.module('copayApp.services')
       name: 'Español',
       isoCode: 'es',
     }, {
+      name: 'Português',
+      isoCode: 'pt',
+    }, {
       name: '日本語',
       isoCode: 'ja',
       useIdeograms: true,
@@ -80,10 +83,14 @@ angular.module('copayApp.services')
       return root.availableLanguages;
     };
 
-    root.init = function() {
-      root._detect(function(lang) {
-        root._set(lang);
-      });
+    root.init = function(defaultLang) {
+      if (!defaultLang) {
+        root._detect(function(lang) {
+          root._set(lang);
+        });
+      } else {
+        root._set(defaultLang);
+      }
     };
 
     root.update = function(cb) {

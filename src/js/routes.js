@@ -20,11 +20,11 @@ angular
                    $urlRouterProvider, $compileProvider, loggly, LogglyLoggerProvider,
                    coluRpcProvider, instanceConfig, coloredCoinsProvider) {
     $urlRouterProvider.otherwise('/');
-    
+
     coluRpcProvider.configure(instanceConfig.coluRpcServer);
-    
+
     coloredCoinsProvider.setSupportedAssets(instanceConfig.assets);
-    
+
     if (loggly.enabled) {
       LogglyLoggerProvider
         .level('ERROR')
@@ -538,7 +538,7 @@ angular
   .run(function($rootScope, $state, $log, uriHandler, isCordova, profileService, $timeout, nodeWebkit, uxLanguage, animationService) {
     FastClick.attach(document.body);
 
-    uxLanguage.init();
+    uxLanguage.init('pt');
 
     // Register URI handler, not for mobileApp
     if (!isCordova) {

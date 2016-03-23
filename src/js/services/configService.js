@@ -30,6 +30,7 @@ angular.module('copayApp.services').factory('configService', function(instanceCo
         unitCode: 'bit',
         alternativeName: 'US Dollar',
         alternativeIsoCode: 'USD',
+        defaultLanguage: 'pt'
       }
     },
 

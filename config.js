@@ -1,4 +1,4 @@
-window.unicoisaConfig = { 
+window.unicoisaConfig = {
   walletName: 'Bitreals',
   mainColor: '',
   secondaryColor: '',
@@ -18,10 +18,10 @@ window.unicoisaConfig = {
   ],
   coluRpcServer: {
     livenet: {
-      baseUrl: 'https://carteira.urv2.com.br:8090'
+      baseUrl: 'https://carteira.urv2.com.br:8190'
     },
     testnet: {
-      baseUrl: 'https://carteira.urv2.com.br:8091'
+      baseUrl: 'https://carteira.urv2.com.br:8290'
     }
   },
   defaultAsset: 'LFu6pNp5FLHQu1RERkYEjPjxFZLD3zNJAbhYz',

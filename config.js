@@ -1,17 +1,17 @@
 window.unicoisaConfig = {
-  walletName: 'Bitreals',
+  walletName: 'BitReais',
   mainColor: '',
   secondaryColor: '',
   assets: [
     {
-      assetId: 'LFu6pNp5FLHQu1RERkYEjPjxFZLD3zNJAbhYz',
-      name: 'Bitreal',
+      assetId: 'Ua9E8E4kY4XrEezyamNAqZAQ4fZzAsUmeKEf4b',
+      name: 'BitReal',
       symbol: 'R$',
       pluralSymbol: 'R$'
     },
     {
-      assetId: 'U4hcbSD61752BbU9FrkVzYo1cCgQtAuBezxVD',
-      name: 'Bitreal testnet',
+      assetId: 'La8UymFqWDfWZMRrytuvwHeREUSTTioXR2vjZa',
+      name: 'Old BitReal',
       symbol: 'R$',
       pluralSymbol: 'R$'
     }
@@ -24,7 +24,7 @@ window.unicoisaConfig = {
       baseUrl: 'https://carteira.urv2.com.br:8290'
     }
   },
-  defaultAsset: 'LFu6pNp5FLHQu1RERkYEjPjxFZLD3zNJAbhYz',
+  defaultAsset: 'Ua9E8E4kY4XrEezyamNAqZAQ4fZzAsUmeKEf4b',
   logo: '',
   coluApiKey: '',
   allowAssetChange: true,

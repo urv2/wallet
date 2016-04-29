@@ -25,7 +25,6 @@
     "qrcode-decoder-js": "*",
     "trezor-connect": "~1.0.1",
     "colu-copay-addon": "~0.6.0",
-    "angular-loggly-logger": "~0.2.0",
     "he": "~0.5.0"
   }
 }

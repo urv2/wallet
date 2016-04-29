@@ -59,7 +59,6 @@ module.exports = function(grunt) {
           'bower_components/angular-gettext/dist/angular-gettext.js',
           'bower_components/angular-touch/angular-touch.js',
           'bower_components/angular-ui-switch/angular-ui-switch.js',
-          'bower_components/angular-loggly-logger/angular-loggly-logger.js',
           'bower_components/he/he.js',
           'angular-bitcore-wallet-client/angular-bitcore-wallet-client.js',
           'bower_components/colu-copay-addon/dist/coluCopayAddon-no-issuance.js',
@@ -201,21 +200,6 @@ module.exports = function(grunt) {
         files: {
           'angular-bitcore-wallet-client/angular-bitcore-wallet-client.js': ['angular-bitcore-wallet-client/index.js']
         },
-      }
-    },
-    includereplace: {
-      loggly: {
-        options: {
-          globals: {
-              unicoisa_log_env: process.env.UNICOISA_LOG_ENV,
-              unicoisa_log_token: process.env.UNICOISA_LOG_TOKEN,
-              unicoisa_log_enabled: !!process.env.UNICOISA_LOG_TOKEN && !!process.env.UNICOISA_LOG_ENV
-          }
-        },
-        // Files to perform replacements and includes with
-        src: 'public/js/copay.js',
-        // Destination directory to copy files to
-        dest: './'
       }
     }
   });

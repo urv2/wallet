@@ -217,8 +217,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-include-replace');
 
-  grunt.registerTask('default', ['nggettext_compile', 'exec:version', 'browserify', 'concat', 'copy:icons', 'copy:config', 'includereplace']);
-  grunt.registerTask('fast', ['concat', 'copy:config', 'includereplace']);
+  grunt.registerTask('default', ['nggettext_compile', 'exec:version', 'browserify', 'concat', 'copy:icons', 'copy:config']);
+  grunt.registerTask('fast', ['concat', 'copy:config']);
   grunt.registerTask('prod', ['default', 'uglify']);
   grunt.registerTask('translate', ['nggettext_extract']);
   grunt.registerTask('test', ['karma:unit']);

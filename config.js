@@ -1,19 +1,19 @@
 window.unicoisaConfig = {
-  walletName: 'BitReais',
+  walletName: 'urv2',
   mainColor: '',
   secondaryColor: '',
   assets: [
     {
-      assetId: 'Ua9E8E4kY4XrEezyamNAqZAQ4fZzAsUmeKEf4b',
+      assetId: 'Ua74rW7rfTTC3s5XFvFNT6GHsoatmdAsUFAsNr',
       name: 'BitReal',
-      symbol: 'R$',
-      pluralSymbol: 'R$'
+      symbol: 'bR$',
+      pluralSymbol: 'bR$'
     },
     {
-      assetId: 'La8UymFqWDfWZMRrytuvwHeREUSTTioXR2vjZa',
-      name: 'Old BitReal',
-      symbol: 'R$',
-      pluralSymbol: 'R$'
+      assetId: 'Ua7MQptnMUqsrDo8jrvtYhyxnfVJRb9FFTdGgc',
+      name: 'CT Coin',
+      symbol: 'CT',
+      pluralSymbol: 'CT'
     }
   ],
   coluRpcServer: {
@@ -24,7 +24,7 @@ window.unicoisaConfig = {
       baseUrl: 'https://carteira.urv2.com.br:8290'
     }
   },
-  defaultAsset: 'Ua9E8E4kY4XrEezyamNAqZAQ4fZzAsUmeKEf4b',
+  defaultAsset: 'Ua74rW7rfTTC3s5XFvFNT6GHsoatmdAsUFAsNr',
   logo: '',
   coluApiKey: '',
   allowAssetChange: true,

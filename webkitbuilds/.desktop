@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Version=1.1.0
+Version=2.0.0
 Name=Unicoisa
 Comment=A multisignature wallet
 Exec=Unicoisa
@@ -9,4 +9,3 @@ Terminal=false
 Categories=Finance
 X-Ubuntu-Touch=true
 X-Ubuntu-StageHint=SideStage
-

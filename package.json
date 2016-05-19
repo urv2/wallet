@@ -2,7 +2,7 @@
   "name": "urv2",
   "description": "A multisignature wallet",
   "author": "Kosta Korenkov <7r0ggy@gmail.com>",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "keywords": [
     "wallet",
     "copay",

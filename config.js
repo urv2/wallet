@@ -10,7 +10,7 @@ window.unicoisaConfig = {
       pluralSymbol: 'bR$'
     },
     {
-      assetId: 'Ua7MQptnMUqsrDo8jrvtYhyxnfVJRb9FFTdGgc',
+      assetId: 'Ua3osB8YMt1aU43jt15WaypJgSXoDPu3fhDv5k',
       name: 'CT Coin',
       symbol: 'CT',
       pluralSymbol: 'CT'

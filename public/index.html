@@ -9,13 +9,13 @@
   <link rel="stylesheet" type="text/css" href="css/foundation.css">
   <link rel="stylesheet" type="text/css" href="icons/foundation-icons.css">
   <link rel="stylesheet" type="text/css" href="css/copay.css">
-  <title ng:bind-template="{{index.instanceName|rawHtml}} - Multisignature Asset Wallet">Multisignature Asset Wallet</title>
+  <title ng:bind-template="{{index.instanceName|rawHtml}} - Carteira Multi-assinatura de Ativos Digitais">Carteira Multi-assinatura de Ativos Digitais</title>
   <link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body ng-cloak class="ng-cloak">
 
-  <div class="page" 
-    ng-swipe-disable-mouse 
+  <div class="page"
+    ng-swipe-disable-mouse
     ng-swipe-left="index.closeMenu()"
     ng-swipe-right="index.openMenu()">
 
@@ -23,7 +23,7 @@
       <div class="inner-wrap">
         <div ng-include="'views/includes/sidebar.html'" ng-if="index.hasProfile"></div>
 
-        <div notifications="right top"></div> 
+        <div notifications="right top"></div>
         <div ng-include="'views/includes/password.html'" ng-if="index.askPassword"></div>
         <div ng-include="'views/includes/alert.html'" ng-if="index.showAlert"></div>
         <div id="sectionContainer">
@@ -39,7 +39,7 @@
       </div>
     </div>
   </div>
-  
+
   <script src="lib/angular.js"></script>
 
   <!-- DO NOT DELETE THIS COMMET  -->

@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="x5381aa50y9069y11e4y84ccy293caf9cbdc8x" Executable="AGHost.exe" EntryPoint="MainPage.xaml">
-      <m3:VisualElements DisplayName="urv2 Wallet" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="A multisignature Bitcoin Wallet" ForegroundText="light" BackgroundColor="#464646">
+      <m3:VisualElements DisplayName="urv2 Wallet" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="Carteira Multi-assinatura de Ativos Digitais" ForegroundText="light" BackgroundColor="#464646">
         <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="SplashScreenImage.jpg" />

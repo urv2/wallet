@@ -65,7 +65,7 @@ msgstr "<b>O</b> as sementes das carteiras de <b>todos</b> os copayers carteira"
 
 #: public/views/disclaimer.html
 msgid "A multisignature bitcoin wallet"
-msgstr "Uma carteira bitcoin multiassinatura"
+msgstr "Carteira Multi-assinatura de Ativos Digitais"
 
 #: public/views/preferencesGlobal.html
 msgid "About urv2"

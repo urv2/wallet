@@ -2,7 +2,7 @@
 Type=Application
 Version=2.1.0
 Name=Unicoisa
-Comment=A multisignature wallet
+Comment=Carteira Multi-assinatura de Ativos Digitais
 Exec=Unicoisa
 Icon=icon-256.png
 Terminal=false

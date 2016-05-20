@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
-Version=2.1.0
-Name=Unicoisa
+Version=2.1.1
+Name=urv2
 Comment=Carteira Multi-assinatura de Ativos Digitais
-Exec=Unicoisa
+Exec=urv2
 Icon=icon-256.png
 Terminal=false
 Categories=Finance

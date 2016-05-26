@@ -178,7 +178,7 @@ module.exports = function(grunt) {
         appName: 'urv2',
         platforms: ['win64', 'osx64', 'linux64'],
         buildDir: './webkitbuilds',
-        version: '2.1.1',
+        version: '2.1.2',
         macIcns: './public/img/icons/icon.icns',
         exeIco: './public/img/icons/icon.ico'
       },

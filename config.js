@@ -22,12 +22,6 @@ window.unicoisaConfig = {
       name: 'CT Coin',
       symbol: 'CT',
       pluralSymbol: 'CT'
-    },
-    {
-      assetId: 'La8eGyyx4qrckmNt1Wjw515quQhpaeRKqKJorU',
-      name: 'Coffee',
-      symbol: 'cup',
-      pluralSymbol: 'cups'
     }
   ],
   defaultAsset: 'Ua74rW7rfTTC3s5XFvFNT6GHsoatmdAsUFAsNr',

@@ -40,8 +40,17 @@ angular.module('copayApp.services').factory('configService', function(instanceCo
       testnet: false
     },
 
+    coinbase: {
+      enabled: true,
+      testnet: false
+    },
+
     rates: {
       url: 'https://insight.bitpay.com:443/api/rates',
+    },
+
+    release: {
+      url: 'https://api.github.com/repos/bitpay/copay/releases/latest'
     },
 
     pushNotifications: {
@@ -49,6 +58,8 @@ angular.module('copayApp.services').factory('configService', function(instanceCo
       config: {
         android: {
           senderID: '1036948132229',
+          icon: 'push',
+          iconColor: '#2F4053'
         },
         ios: {
           alert: 'true',
@@ -89,6 +100,9 @@ angular.module('copayApp.services').factory('configService', function(instanceCo
         if (!configCache.glidera) {
           configCache.glidera = defaultConfig.glidera;
         }
+        if (!configCache.coinbase) {
+          configCache.coinbase = defaultConfig.coinbase;
+        }
         if (!configCache.pushNotifications) {
           configCache.pushNotifications = defaultConfig.pushNotifications;
         }
@@ -100,14 +114,20 @@ angular.module('copayApp.services').factory('configService', function(instanceCo
       // Disabled for testnet
       configCache.glidera.testnet = false;
 
+      // Coinbase
+      // Disabled for testnet
+      configCache.coinbase.testnet = false;
+
       $log.debug('Preferences read:', configCache)
       return cb(err, configCache);
     });
   };
 
   root.set = function(newOpts, cb) {
-    var config = lodash.clone(defaultConfig);
+    var config = lodash.cloneDeep(defaultConfig);
     storageService.getConfig(function(err, oldOpts) {
+      oldOpts = oldOpts || {};
+
       if (lodash.isString(oldOpts)) {
         oldOpts = JSON.parse(oldOpts);
       }
@@ -117,6 +137,7 @@ angular.module('copayApp.services').factory('configService', function(instanceCo
       if (lodash.isString(newOpts)) {
         newOpts = JSON.parse(newOpts);
       }
+
       lodash.merge(config, oldOpts, newOpts);
       configCache = config;
 

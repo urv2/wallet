@@ -11,11 +11,15 @@ function(historicLog) {
       return v.msg;
     }).join('\n');
 
-    var properties = {
-      subject: 'urv2 Logs',
-      body: body,
-      isHtml: false
-    };
-    window.plugin.email.open(properties);
+    window.plugins.socialsharing.shareViaEmail(
+      body,
+      'uv2 Logs',
+      null, // TO: must be null or an array
+      null, // CC: must be null or an array
+      null, // BCC: must be null or an array
+      null, // FILES: can be null, a string, or an array
+      function() {},
+      function() {}
+    );
   };
 });

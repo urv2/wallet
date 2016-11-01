@@ -16,7 +16,7 @@ function selectText(element) {
   }
 }
 angular.module('copayApp.directives')
-.directive('validAddress', ['$rootScope', 'bitcore', 'profileService',
+  .directive('validAddress', ['$rootScope', 'bitcore', 'profileService',
     function($rootScope, bitcore, profileService) {
       return {
         require: 'ngModel',
@@ -94,19 +94,25 @@ angular.module('copayApp.directives')
           var val = function(value) {
             var settings = configService.getSync().wallet.settings;
             var vNum = Number((value * settings.unitToSatoshi).toFixed(0));
-
             if (typeof value == 'undefined' || value == 0) {
               ctrl.$pristine = true;
             }
 
+
+
             if (typeof vNum == "number" && vNum > 0) {
-              var decimals = Number(settings.unitDecimals);
-              var sep_index = ('' + value).indexOf('.');
-              var str_value = ('' + value).substring(sep_index + 1);
-              if (sep_index > 0 && str_value.length > decimals) {
+              if (vNum > Number.MAX_SAFE_INTEGER) {
                 ctrl.$setValidity('validAmount', false);
               } else {
-                ctrl.$setValidity('validAmount', true);
+                var decimals = Number(settings.unitDecimals);
+                var sep_index = ('' + value).indexOf('.');
+                var str_value = ('' + value).substring(sep_index + 1);
+                if (sep_index >= 0 && str_value.length > decimals) {
+                  ctrl.$setValidity('validAmount', false);
+                  return;
+                } else {
+                  ctrl.$setValidity('validAmount', true);
+                }
               }
             } else {
               ctrl.$setValidity('validAmount', false);
@@ -162,21 +168,23 @@ angular.module('copayApp.directives')
       }
     }
   })
-  .directive('contact', ['addressbookService', function(addressbookService) {
-    return {
-      restrict: 'E',
-      link: function(scope, element, attrs) {
-        var addr = attrs.address;
-        addressbookService.getLabel(addr, function(label) {
-          if (label) {
-            element.append(label);
-          } else {
-            element.append(addr);
-          }
-        });
-      }
-    };
-  }])
+  .directive('contact', ['addressbookService',
+    function(addressbookService) {
+      return {
+        restrict: 'E',
+        link: function(scope, element, attrs) {
+          var addr = attrs.address;
+          addressbookService.getLabel(addr, function(label) {
+            if (label) {
+              element.append(label);
+            } else {
+              element.append(addr);
+            }
+          });
+        }
+      };
+    }
+  ])
   .directive('highlightOnChange', function() {
     return {
       restrict: 'A',
@@ -301,22 +309,32 @@ angular.module('copayApp.directives')
     return {
       restrict: 'E',
       scope: {
-        width: "@",
-        negative: "="
+        width: "@"
       },
       controller: function($scope, instanceConfig) {
-        var logo = instanceConfig.logo || 'logo.svg';
-        var logoNegative = instanceConfig.logo || 'logo-negative.svg';
-        $scope.logo_url = $scope.negative ? 'img/' + logoNegative : 'img/' + logo;
+        $scope.logo_url = instanceConfig.logo || 'img/logo-negative.svg';
       },
       replace: true,
       template: '<img ng-src="{{ logo_url }}" alt="urv2">'
     }
   })
   .directive('availableBalance', function() {
-      return {
-        restrict: 'E',
-        replace: true,
-        templateUrl: 'views/includes/available-balance.html'
+    return {
+      restrict: 'E',
+      replace: true,
+      templateUrl: 'views/includes/available-balance.html'
+    }
+  })
+  .directive('ignoreMouseWheel', function($rootScope, $timeout) {
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+        element.bind('mousewheel', function(event) {
+          element[0].blur();
+          $timeout(function() {
+            element[0].focus();
+          }, 1);
+        });
       }
+    }
   });

@@ -3,12 +3,20 @@ angular.module('copayApp.services')
   .factory('uxLanguage', function languageService($log, lodash, gettextCatalog, amMoment, configService) {
     var root = {};
 
+    root.currentLanguage = null;
+
     root.availableLanguages = [{
       name: 'English',
       isoCode: 'en',
     }, {
+      name: 'Český',
+      isoCode: 'cs',
+    }, {
       name: 'Français',
       isoCode: 'fr',
+    }, {
+      name: 'Italiano',
+      isoCode: 'it',
     }, {
       name: 'Deutsch',
       isoCode: 'de',
@@ -23,11 +31,17 @@ angular.module('copayApp.services')
       isoCode: 'ja',
       useIdeograms: true,
     }, {
+      name: '中文（简体）',
+      isoCode: 'zh',
+      useIdeograms: true,
+    }, {
+      name: 'Polski',
+      isoCode: 'pl',
+    }, {
       name: 'Pусский',
       isoCode: 'ru',
     }];
 
-    root.currentLanguage = null;
 
     root._detect = function(cb) {
 
@@ -61,8 +75,9 @@ angular.module('copayApp.services')
     root._set = function(lang) {
       $log.debug('Setting default language: ' + lang);
       gettextCatalog.setCurrentLanguage(lang);
+      root.currentLanguage = lang; 
+      if (lang == 'zh') lang = lang + '-CN'; // Fix for Chinese Simplified
       amMoment.changeLocale(lang);
-      root.currentLanguage = lang;
     };
 
     root.getCurrentLanguage = function() {
@@ -97,20 +112,20 @@ angular.module('copayApp.services')
       var userLang = configService.getSync().wallet.settings.defaultLanguage;
 
       if (!userLang) {
-
         root._detect(function(lang) {
           userLang = lang;
 
           if (userLang != root.currentLanguage) {
             root._set(lang);
           }
-          return cb(userLang);
+          if (cb) return cb(userLang);
         });
       } else {
         if (userLang != root.currentLanguage) {
           root._set(userLang);
         }
-        return cb(userLang);
+
+        if (cb) return cb(userLang);
       }
     };
 

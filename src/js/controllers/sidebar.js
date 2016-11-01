@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('copayApp.controllers').controller('sidebarController',
-  function($rootScope, $timeout, lodash, profileService, configService, go, isMobile, isCordova) {
+  function($rootScope, $timeout, $ionicScrollDelegate, lodash, profileService, configService, go, platformInfo) {
     var self = this;
-    self.isWindowsPhoneApp = isMobile.Windows() && isCordova;
+    self.isWindowsPhoneApp = platformInfo.isWP && platformInfo.isCordova;
     self.walletSelection = false;
 
     // wallet list change
@@ -20,15 +20,16 @@ angular.module('copayApp.controllers').controller('sidebarController',
       self.setWallets();
     });
 
-
     self.signout = function() {
       profileService.signout();
     };
 
     self.switchWallet = function(selectedWalletId, currentWalletId) {
-      if (selectedWalletId == currentWalletId) return;
+      var client = profileService.focusedClient;
+      if (selectedWalletId == currentWalletId && client.isComplete()) return;
       self.walletSelection = false;
       profileService.setAndStoreFocus(selectedWalletId, function() {});
+      $ionicScrollDelegate.scrollTop();
     };
 
     self.toggleWalletSelection = function() {
@@ -60,5 +61,4 @@ angular.module('copayApp.controllers').controller('sidebarController',
     };
 
     self.setWallets();
-
   });

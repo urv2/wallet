@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Deployment AppPlatformVersion="8.1" xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment">
   <DefaultLanguage code="en-US" xmlns="" />
   <Languages xmlns="">
@@ -8,6 +8,8 @@
     <Language code="ja" />
     <Language code="es" />
     <Language code="ru" />
+    <Language code="pl" />
+    <Language code="cs" />
   </Languages>
   <App Author="Catalão 72" BitsPerPixel="32" Description="Carteira Multi-assinatura de Ativos Digitais" Genre="apps.normal" ProductID="{5381aa50-9069-11e4-84cc-293caf9cbdc8}" Publisher="urv2 Wallet" PublisherID="{31cdd08b-457c-413d-b440-f6665eec847d}" RuntimeType="Silverlight" Title="urv2 Wallet" Version="1.0.0.0" xmlns="" NotificationService="MPN">
     <IconPath IsRelative="true" IsResource="false">Assets\icon@2.png</IconPath>

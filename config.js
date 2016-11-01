@@ -1,7 +1,15 @@
 window.unicoisaConfig = {
+
+  // wallet UI configuration
   walletName: 'urv2',
-  mainColor: '',
-  secondaryColor: '',
+  mainColor: '',      // if blank default color will be used
+  secondaryColor: '', // if blank default color will be used
+  logo: '',           // if blank default logo will be used
+  allowAssetChange: true,
+  noUserColors: false,
+  needsBackup: true,
+
+  // Assets configuration
   assets: [
     {
       assetId: 'Ua74rW7rfTTC3s5XFvFNT6GHsoatmdAsUFAsNr',
@@ -16,18 +24,19 @@ window.unicoisaConfig = {
       pluralSymbol: 'CT'
     }
   ],
-  coluRpcServer: {
-    livenet: {
-      baseUrl: 'https://carteira.urv2.com.br:8190'
-    },
-    testnet: {
-      baseUrl: 'https://carteira.urv2.com.br:8290'
-    }
-  },
   defaultAsset: 'Ua74rW7rfTTC3s5XFvFNT6GHsoatmdAsUFAsNr',
-  logo: '',
-  coluApiKey: '',
-  allowAssetChange: true,
-  noUserColors: false,
-  needsBackup: true
+
+  // Colu connectivity configuration
+  // see https://github.com/troggy/colu-copay-addon
+  colu: {
+    mode: 'rpc',
+    rpcServer: {
+      livenet: {
+        baseUrl: 'https://carteira.urv2.com.br:8190'
+      },
+      testnet: {
+        baseUrl: 'https://carteira.urv2.com.br:8290'
+      }
+    }
+  }
 };

@@ -136,16 +136,6 @@ angular.module('copayApp.controllers').controller('indexController', function($r
     });
   };
 
-  var disableOngoingProcessListener = $rootScope.$on('Addon/OngoingProcess', function(e, name) {
-    self.setOngoingProcess(name);
-  });
-
-  self.openWalletInfo = function() {
-    if (self.allowAssetChange) {
-        go.path('walletInfo');
-    }
-  };
-
   self.setFocusedWallet = function() {
     var fc = profileService.focusedClient;
     if (!fc) return;
@@ -1169,24 +1159,6 @@ angular.module('copayApp.controllers').controller('indexController', function($r
   self.filterProposals = function(txp) {
     if (self.asset.isAsset) {
       // for asset wallet show only colored tx of the wallet color
-      return txp.isColored && txp.customData.asset.assetId === self.asset.assetId;
-    } else {
-      return !txp.isColored; // show only colorless tx for btc wallet
-    }
-  };
-
-  self.filterHistory = function(tx) {
-    if (self.asset.isAsset) {
-      // for asset wallet show only colored tx of the wallet color
-      return tx.isColored && tx.assetId === self.asset.assetId;
-    } else {
-      return !tx.isColored; // show only colorless tx for btc wallet
-    }
-  };
-
-  self.filterProposals = function(txp) {
-    if (self.asset.isAsset) {
-      // for asset wallet show only colored tx of the wallet color
       return txp.isAsset && txp.customData.asset.assetId === self.asset.assetId;
     } else {
       return !txp.isAsset; // show only colorless tx for btc wallet
@@ -1389,7 +1361,7 @@ angular.module('copayApp.controllers').controller('indexController', function($r
       to: tx.toAddr,
       amount: tx.amount.amount,
       currency: tx.amount.currency,
-      description: 'To Copay Wallet'
+      description: 'To urv2 Wallet'
     };
     coinbaseService.sendTo(self.coinbaseToken, self.coinbaseAccount.id, data, function(err, res) {
       if (err) {
@@ -1613,44 +1585,6 @@ angular.module('copayApp.controllers').controller('indexController', function($r
       }
     });
   });
-
-  var updateHistoryColors = function(cb) {
-    coloredCoins.whenAvailable(function(assets, coloredTxs) {
-      lodash.forEach(self.completeHistory, function(tx) {
-        var colorTx = coloredTxs[tx.txid];
-        if (tx.isColored || !colorTx || !colorTx.colored) return;
-
-        tx.isColored = true;
-        var nVout = colorTx.ccdata[0].payments[0].output;
-        var asset = colorTx.vout[nVout].assets[0];
-        tx.assetId = asset.assetId;
-        tx.issuanceTxId = asset.issueTxid;
-
-        var amount = lodash.sum(lodash.pluck(colorTx.vout[nVout].assets, 'amount'));
-        asset.divisible = asset.divisibility;
-        tx.assetAmountStr = coloredCoins.formatAssetAmount(amount, asset);
-        tx.amountStr = tx.assetAmountStr; // for history details
-        tx.addressTo = tx.outputs[0].toAddress || tx.outputs[0].address;
-      });
-      cb(self.completeHistory);
-    });
-  };
-
-  var updateAndFilterProposals = function() {
-      self.txps = lodash.filter(self.allTxps, self.filterProposals);
-  };
-
-  var updateAndFilterHistory = function(showAll) {
-    coloredCoins.whenAvailable(function(assets, coloredTxs) {
-      var newHistory = lodash.filter(self.completeHistory, self.filterHistory);
-      if (!showAll) {
-        self.txHistory = newHistory.slice(0, self.historyShowLimit);
-        self.historyShowShowAll = newHistory.length > self.historyShowLimit;
-      } else {
-        self.txHistory = newHistory;
-      }
-    });
-  };
 
   var updateHistoryColors = function(cb) {
     coloredCoins.whenAvailable(function(assets, coloredTxs) {

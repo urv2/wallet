@@ -101,7 +101,7 @@ angular.module('copayApp.services').factory('openURLService', function($rootScop
             url: pathData.substring(pathData.indexOf('bitcoin:'))
           });
         } else if (pathData.indexOf('copay:') != -1) {
-          $log.debug('Copay URL found');
+          $log.debug('urv2 URL found');
           handleOpenURL({
             url: pathData.substring(pathData.indexOf('copay:'))
           });

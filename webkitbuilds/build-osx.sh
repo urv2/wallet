@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SHOULD_SIGN=$1
-if [ "$SHOULD_SIGN" ] 
+if [ "$SHOULD_SIGN" ]
 then
   echo "Will sign the APP"
 fi
@@ -35,11 +35,11 @@ _BACKGROUND_IMAGE_DPI_W=`sips -g dpiWidth ${DMG_BACKGROUND_IMG} | grep -Eo '[0-9
 if [ $(echo " $_BACKGROUND_IMAGE_DPI_H != 72.0 " | bc) -eq 1 -o $(echo " $_BACKGROUND_IMAGE_DPI_W != 72.0 " | bc) -eq 1 ]; then
    echo "WARNING: The background image's DPI is not 72.  This will result in distorted backgrounds on Mac OS X 10.7+."
    echo "         I will convert it to 72 DPI for you."
-   
+
    _DMG_BACKGROUND_TMP="${DMG_BACKGROUND_IMG%.*}"_dpifix."${DMG_BACKGROUND_IMG##*.}"
 
    sips -s dpiWidth 72 -s dpiHeight 72 ${DMG_BACKGROUND_IMG} --out ${_DMG_BACKGROUND_TMP}
-   
+
    DMG_BACKGROUND_IMG="${_DMG_BACKGROUND_TMP}"
 fi
 
@@ -66,11 +66,11 @@ if [ $? -ne 0 ]; then
 # Sign Code (MATIAS)
 if [ $SHOULD_SIGN ]
 then
-  echo "Signing Copay DMG"
+  echo "Signing urv2 DMG"
 
   export IDENTITY="3rd Party Mac Developer Application: BitPay, Inc. (884JRH5R93)"
 
-  # not need for 'out of app store' distribution (?)  
+  # not need for 'out of app store' distribution (?)
 #  export PARENT_PLIST=parent.plist
 #  export CHILD_PLIST=child.plist
   export APP_PATH=${STAGING_DIR}/${APP_NAME}.app

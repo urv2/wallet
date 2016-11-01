@@ -22,6 +22,12 @@ window.unicoisaConfig = {
       name: 'CT Coin',
       symbol: 'CT',
       pluralSymbol: 'CT'
+    },
+    {
+      assetId: 'La8eGyyx4qrckmNt1Wjw515quQhpaeRKqKJorU',
+      name: 'Coffee',
+      symbol: 'cup',
+      pluralSymbol: 'cups'
     }
   ],
   defaultAsset: 'Ua74rW7rfTTC3s5XFvFNT6GHsoatmdAsUFAsNr',
@@ -30,7 +36,7 @@ window.unicoisaConfig = {
   // see https://github.com/troggy/colu-copay-addon
   colu: {
     mode: 'rpc',
-    rpcServer: {
+    rpcConfig: {
       livenet: {
         baseUrl: 'https://carteira.urv2.com.br:8190'
       },

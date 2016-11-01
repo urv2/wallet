@@ -6,10 +6,10 @@ verify:
 	gpg --verify browser-extensions/chrome/urv2-chrome-extension.zip.sig browser-extensions/chrome/urv2-chrome-extension.zip
 
 sign-osx:
-	codesign -s 3rd webkitbuilds/Copay-osx.dmg
+	codesign -s 3rd webkitbuilds/urv2-osx.dmg
 
 verify-osx:
-	codesign -dv webkitbuilds/Copay-osx.dmg
+	codesign -dv webkitbuilds/urv2-osx.dmg
 
 sign-desktop:
 	gpg -u 1112CFA1 --output webkitbuilds/urv2-linux.zip.sig --detach-sig webkitbuilds/urv2-linux.zip
@@ -59,7 +59,7 @@ android-prod:
 	cordova/build.sh ANDROID --clear
 	rm -f cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk
 	cd cordova/project && cordova build android --release
-	jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ../urv2-play.keystore -signedjar cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk  cordova/project/platforms/android/build/outputs/apk/android-release-unsigned.apk urv2-play 
+	jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ../urv2-play.keystore -signedjar cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk  cordova/project/platforms/android/build/outputs/apk/android-release-unsigned.apk urv2-play
 	zipalign -v 4 cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk
 
 android-debug:

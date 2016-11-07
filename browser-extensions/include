@@ -9,3 +9,4 @@
 ./lib/*.js
 ./views/*.html
 ./views/**/*.html
+./config.js

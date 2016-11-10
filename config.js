@@ -7,7 +7,7 @@ window.unicoisaConfig = {
   logo: '',           // if blank default logo will be used
   allowAssetChange: true,
   noUserColors: false,
-  needsBackup: false,
+  needsBackup: true,
 
   // Assets configuration
   assets: [

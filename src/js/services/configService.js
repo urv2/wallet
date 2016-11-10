@@ -24,12 +24,12 @@ angular.module('copayApp.services').factory('configService', function(instanceCo
       reconnectDelay: 5000,
       idleDurationMin: 4,
       settings: {
-        unitName: 'bits',
-        unitToSatoshi: 100,
-        unitDecimals: 2,
-        unitCode: 'bit',
-        alternativeName: 'US Dollar',
-        alternativeIsoCode: 'USD',
+        unitName: 'BTC',
+        unitToSatoshi: 100000000,
+        unitDecimals: 8,
+        unitCode: 'btc',
+        alternativeName: 'Brazilian Real',
+        alternativeIsoCode: 'BRL',
         defaultLanguage: 'pt_BR'
       }
     },

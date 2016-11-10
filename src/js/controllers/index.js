@@ -55,6 +55,9 @@ angular.module('copayApp.controllers').controller('indexController', function($r
   ret.addonViews = addonManager.addonViews();
   ret.txTemplateUrl = addonManager.txTemplateUrl() || 'views/includes/transaction.html';
 
+  ret.hideBuySell = true;
+  ret.hideGiftcards = true;
+
   ret.tab = 'walletHome';
   var vanillaScope = ret;
 

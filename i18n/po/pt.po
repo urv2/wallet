@@ -2090,5 +2090,6 @@ msgstr "Chave da carteira"
 
 #: public/views/create.html
 #: public/views/join.html
+#: public/views/import.html
 msgid "Wallet Service URL"
 msgstr "URL do Serviço de Carteira"

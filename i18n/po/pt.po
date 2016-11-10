@@ -1964,6 +1964,10 @@ msgstr "ADVERTÊNCIA: CERTIFICADO NÃO É DE CONFIANÇA"
 msgid "WARNING: Wallet not registered"
 msgstr "ADVERTÊNCIA: Carteira não registrada"
 
+#: public/views/disclaimer.html
+msgid "WELCOME TO URV2"
+msgstr "Bem-vindo à URV2"
+
 #: public/views/preferencesDeleteWallet.html
 #: public/views/preferencesDeleteWords.html
 msgid "Warning!"
@@ -2074,3 +2078,17 @@ msgstr "Símbolo"
 #: public/views/addToken.html
 msgid "Currency symbol, e.g. bR$"
 msgstr "Simbolo do token, p.e. bR$"
+
+#: public/views/preferencesGlobal.html
+msgid "About urv2"
+msgstr "Sobre a urv2"
+
+#: public/views/create.html
+#: public/views/join.html
+msgid "Wallet Key"
+msgstr "Chave da carteira"
+
+#: public/views/create.html
+#: public/views/join.html
+msgid "Wallet Service URL"
+msgstr "URL do Serviço de Carteira"

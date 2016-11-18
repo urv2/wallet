@@ -12,19 +12,13 @@ window.unicoisaConfig = {
   // Assets configuration
   assets: [
     {
-      assetId: 'Ua74rW7rfTTC3s5XFvFNT6GHsoatmdAsUFAsNr',
+      assetId: 'La7RYbhpAUBS64VdnwoyGt63vMUUtp6RYukaJp',
       name: 'BitReal',
       symbol: 'bR$',
       pluralSymbol: 'bR$'
-    },
-    {
-      assetId: 'Ua3osB8YMt1aU43jt15WaypJgSXoDPu3fhDv5k',
-      name: 'CT Coin',
-      symbol: 'CT',
-      pluralSymbol: 'CT'
     }
   ],
-  defaultAsset: 'Ua74rW7rfTTC3s5XFvFNT6GHsoatmdAsUFAsNr',
+  defaultAsset: 'La7RYbhpAUBS64VdnwoyGt63vMUUtp6RYukaJp',
 
   // Colu connectivity configuration
   // see https://github.com/troggy/colu-copay-addon

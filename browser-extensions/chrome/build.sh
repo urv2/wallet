@@ -43,7 +43,7 @@ echo "${OpenColor}${Green}* Copying all chrome-extension files...${CloseColor}"
 sed "s/APP_VERSION/$VERSION/g" manifest.json > $APPDIR/manifest.json
 checkOK
 
- 
+
 INCLUDE=`cat ../include`
 INITIAL=$BUILDDIR/initial.js
 echo "INITIAL: $INITIAL"

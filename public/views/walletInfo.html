@@ -15,8 +15,8 @@
       </a>
       <ion-radio class="line-b size-12 radio-label" ng-value="asset.assetId" ng-model="walletInfo.assetId"
         ng-click="walletInfo.setSelectedAsset(asset.assetId)">
-          {{ asset.assetName | rawHtml }}
-          <span class="right" style="margin-right: 20px">{{ asset.balanceStr | rawHtml }}</span>
+          {{ asset.assetName }}
+          <span class="right" style="margin-right: 20px">{{ asset.balanceStr }}</span>
       </ion-radio>
     </div>
     <h4></h4>

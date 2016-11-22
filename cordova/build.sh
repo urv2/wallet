@@ -181,7 +181,7 @@ if $DBGJS
 then
   echo "${OpenColor}${Green}* Generating urv2 bundle (debug js)...${CloseColor}"
   cd $BUILDDIR/..
-  grunt static
+  grunt
   checkOK
 else
   echo "${OpenColor}${Green}* Generating urv2 bundle...${CloseColor}"

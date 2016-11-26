@@ -1,8 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="br.com.urv2.wallet"
-  version="2.2.1"
-  android-versionCode="10"
-  ios-CFBundleVersion="2.2.1">
+  version="2.2.2">
     <name>urv2</name>
     <description>
       Digital Asset Wallet
